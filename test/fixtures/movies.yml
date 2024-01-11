@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  duration: MyString
+  director: MyString
+  image_file_name: MyString
+  total_gross: 9.99
+  rating: MyString
+  released_on: 2024-01-04
+
+two:
+  title: MyString
+  description: MyText
+  duration: MyString
+  director: MyString
+  image_file_name: MyString
+  total_gross: 9.99
+  rating: MyString
+  released_on: 2024-01-04

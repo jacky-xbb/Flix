@@ -1,0 +1,53 @@
+<%= form_with(model: movie, local: true) do |form| %>
+
+  <%= render "shared/errors", object: movie %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, rows: 10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.select :rating, Movie::RATINGS, prompt: "Pick one" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_gross %>
+    <%= form.number_field :total_gross %>
+  </div>
+
+  <div class="field">
+    <%= form.label :released_on %>
+    <%= form.date_field :released_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_file_name %>
+    <%= form.text_field :image_file_name, placeholder: "placeholder.png" %>
+  </div>
+
+  <div class="checkboxes">
+    <%= form.collection_check_boxes(:genre_ids, Genre.order(:name), :id, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>
